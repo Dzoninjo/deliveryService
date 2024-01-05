@@ -14,15 +14,19 @@ export default function Login({ navigation }) {
         if( name.length === 0 || password.length === 0){
             Alert.alert("Upozorenje","Korisničko ime ili lozinka ne smeju da budu prazni")
         }
-        else{
-            try{
-              await AsyncStorage.setItem("UserName", name);
-              navigation.navigate("Home");
-            }
-            catch (error){
-              console.log(error);
-            }
+        else if(name !== 'Nikola' && password !== 'Guzic'){
+          Alert.alert("Greška", "Niste uneli ispravne korisničke podatke!");
         }
+        else {
+          try{
+            await AsyncStorage.setItem("UserName", name);
+            navigation.navigate("Home");
+          }
+          catch (error){
+            console.log(error);
+          }
+      }
+  
     }
 
   return (
