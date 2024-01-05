@@ -17,7 +17,7 @@ export default function Splash({navigation}){
 
     return (
         <View style = {styles.body}>
-            <Text style = {styles.text}>Startni ekran</Text>
+            <Text style = {styles.text}>Aplikacija za kućnu dostavu</Text>
         </View>
     )
 }
@@ -27,12 +27,14 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems:'center',
         backgroundColor:'#063887',
+        justifyContent : "center",
     },
     text:{
         color:'#fff',
         padding:30,
         fontSize:30,
-        justifyContent:"center",
+        justifyContent : "center",
+        textAlign : "center",
     },
     input:{
         width:300,
